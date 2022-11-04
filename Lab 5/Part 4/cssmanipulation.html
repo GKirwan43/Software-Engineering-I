@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Manipulation</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function updateText() {
+        let border_color = document.forms["css_changes"]["border_color"].value
+        let border_width = document.forms["css_changes"]["border_width"].value
+        let background_color = document.forms["css_changes"]["background_color"].value
+
+        document.getElementById("body").style.borderColor = border_color
+        document.getElementById("body").style.borderWidth = border_width + "px"
+        document.getElementById("body").style.backgroundColor = background_color
+
+        console.log(border_width)
+
+        return false
+      }
+    </script>
+  </head>
+  <body id="body">
+    <div class="container">
+      <div class="center">
+        <h1>CSS Manipulation</h1>
+        <div id="text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            perferendis soluta deserunt molestias sed possimus? Quibusdam
+            voluptatibus doloremque, sunt nulla corrupti expedita molestiae
+            numquam atque cum distinctio magni laborum possimus minima recusandae
+            odio, perferendis repellendus repellat nobis iure consequatur, facere
+            voluptatum libero unde eum? Nisi doloribus laboriosam qui obcaecati
+            sint.
+          </p>
+        </div>
+        <form name="css_changes" onsubmit="return updateText()">
+          <h2>Border:</h2>
+          <input type="radio" name="border_color" id="border_red" value="red" />
+          <label for="border_red">Red</label><br />
+          <input
+            type="radio"
+            name="border_color"
+            id="border_green"
+            value="green"
+          />
+          <label for="border_green">Green</label><br />
+          <input
+            type="radio"
+            name="border_color"
+            id="border_blue"
+            value="blue"
+          />
+          <label for="border_blue">Blue</label><br />
+          <label>Width:</label><input type="number" name="border_width" required/><label></label>px</label><br />
+          <h2>Background color:</h2>
+          <input type="radio" name="background_color" id="background_red" value="red" />
+          <label for="background_red">Red</label><br />
+          <input
+            type="radio"
+            name="background_color"
+            id="background_green"
+            value="green"
+          />
+          <label for="background_green">Green</label><br />
+          <input
+            type="radio"
+            name="background_color"
+            id="background_blue"
+            value="blue"
+          />
+          <label for="background_blue">Blue</label><br />
+          <input style="margin-top:5px;" type="submit" value="Apply Changes">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
