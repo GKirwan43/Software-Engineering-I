@@ -5,10 +5,58 @@
   </head>
   <body>
     <h1>Quiz Creation</h1>
-    <form action="myBackend.php" method="post">
-      Name: <input type="text" name="name" /><br />
-      E-mail: <input type="text" name="email" /><br />
-      <input type="submit" />
+    <form action="quiz.php" method="post">
+      <p>Questions 1: What color is the sky?</p>
+      <input type="radio" id="q1_op1" name="question1" value="Blue" required>
+      <label for="q1_op1">Blue</label><br>
+      <input type="radio" id="q1_op2" name="question1" value="Red" required>
+      <label for="q1_op2">Red</label><br>
+      <input type="radio" id="q1_op3" name="question1" value="Green" required>
+      <label for="q1_op3">Green</label><br>
+      <input type="radio" id="q1_op4" name="question1" value="Orange" required>
+      <label for="q1_op4">Orange</label><br>
+
+      <p>Questions 2: What is the best TV show?</p>
+      <input type="radio" id="q2_op1" name="question2" value="Better Call Saul" required>
+      <label for="q2_op1">Better Call Saul</label><br>
+      <input type="radio" id="q2_op2" name="question2" value="Breaking Bad" required>
+      <label for="q2_op2">Breaking Bad</label><br>
+      <input type="radio" id="q2_op3" name="question2" value="Severance" required>
+      <label for="q2_op3">Severance</label><br>
+      <input type="radio" id="q2_op4" name="question2" value="Stranger Things" required>
+      <label for="q2_op4">Stranger Things</label><br>
+
+      <p>Questions 3: Who is the current president of the United States?</p>
+      <input type="radio" id="q3_op1" name="question3" value="Donald Trump" required>
+      <label for="q3_op1">Donald Trump</label><br>
+      <input type="radio" id="q3_op2" name="question3" value="Walter White" required>
+      <label for="q3_op2">Walter White</label><br>
+      <input type="radio" id="q3_op3" name="question3" value="Barack Obama" required>
+      <label for="q3_op3">Barack Obama</label><br>
+      <input type="radio" id="q3_op4" name="question3" value="Joe Biden" required>
+      <label for="q3_op4">Joe Biden</label><br>
+
+      <p>Questions 4: Who makes the IPhone?</p>
+      <input type="radio" id="q4_op1" name="question4" value="Apple" required>
+      <label for="q4_op1">Apple</label><br>
+      <input type="radio" id="q4_op2" name="question4" value="Microsoft" required>
+      <label for="q4_op2">Microsoft</label><br>
+      <input type="radio" id="q4_op3" name="question4" value="Walmart" required>
+      <label for="q4_op3">Walmart</label><br>
+      <input type="radio" id="q4_op4" name="question4" value="Verizon" required>
+      <label for="q4_op4">Verizon</label><br>
+
+      <p>Questions 5: What country are we in?</p>
+      <input type="radio" id="q5_op1" name="question5" value="France" required>
+      <label for="q5_op1">France</label><br>
+      <input type="radio" id="q5_op2" name="question5" value="Sweden" required>
+      <label for="q5_op2">Sweden</label><br>
+      <input type="radio" id="q5_op3" name="question5" value="United States" required>
+      <label for="q5_op3">United States</label><br>
+      <input type="radio" id="q5_op4" name="question5" value="United Kingdom" required>
+      <label for="q5_op4">United Kingdom</label><br>
+
+      <input type="submit" value="Submit">
     </form>
   </body>
 </html>
