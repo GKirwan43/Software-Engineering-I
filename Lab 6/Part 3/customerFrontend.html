@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Store</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="formChecker.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <h1>Web Store</h1>
+        <div style="width:500px">
+            <p>Welcome to the online store.</p>
+            <p>Select what you want to purchase below.</p>
+        </div>
+        <div class="center">
+            <form name="shoppingForm" action="customerBackend.php" onsubmit="return checkForm()" method="post">
+                <div id="item_selection">
+                    <h2>Item Selection:</h2>
+                    <div class="item">
+                        <h2>Shoes</h2>
+                        <h3 class="price">$20</h3>
+                        <img src="images/shoes.webp" alt="Shoes"><br>
+                        <label for="shoes_quanity">Quanity:</label>
+                        <input class="quanity" id="shoes_quanity" name="shoes_quanity" type="number" value="0" min="0">
+                    </div>
+                    <div class="item">
+                        <h2>Computer</h2>
+                        <h3 class="price">$1000</h3>
+                        <img src="images/computer.jpg" alt="Computer"><br>
+                        <label for="computer_quanity">Quanity:</label>
+                        <input class="quanity" id="computer_quanity" name="computer_quanity" type="number" value="0" min="0">
+                    </div>
+                    <div class="item">
+                        <h2>Chair</h2>
+                        <h3 class="price">$100</h3>
+                        <img src="images/chair.jpg" alt="Chair"><br>
+                        <label for="chair_quanity">Quanity:</label>
+                        <input class="quanity" id="chair_quanity" name="chair_quanity" type="number" value="0" min="0">
+                    </div>
+                </div>
+                <div style="display:flex;">
+                    <div id="user_information">
+                        <h2>User Information:</h2>
+                        <div class="border">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username"><br><br>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password"><br>
+                        </div>
+                    </div>
+                    <div id="shipping_information">
+                        <h2>Shipping Information:</h2>
+                        <div class="border">
+                            <input type="radio" id="shipping1" name="shipping" value="Free 7 day">
+                            <label for="shipping1">Free 7 day</label><br>
+                            <input type="radio" id="shipping2" name="shipping" value="$50.00 over night">
+                            <label for="shipping2">$50.00 over night</label><br>
+                            <input type="radio" id="shipping3" name="shipping" value="$5.00 three day">
+                            <label for="shipping3">$5.00 three day</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="errors"></div>
+                <div id="buttons">
+                    <input type="reset" value="Reset" onclick="removeErrors()">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>
