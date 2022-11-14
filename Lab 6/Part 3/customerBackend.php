@@ -28,7 +28,7 @@
 
     function totalRow() {
         global $shoesQuanity, $computerQuanity, $chairQuanity, $shipping_cost;
-        $total_cost = (($shoesQuanity * 20) + ($computerQuanity * 1000) + ($chairQuanity * 1000) + $shipping_cost);
+        $total_cost = (($shoesQuanity * 20) + ($computerQuanity * 1000) + ($chairQuanity * 100) + $shipping_cost);
         return "<tr><th colspan='3'>Total Cost</th><th>$$total_cost</th></tr>";
     }
 ?>
